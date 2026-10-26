@@ -1,7 +1,7 @@
 import type { INodePropertyOptions } from 'n8n-workflow';
 
 /** Kept equal to package.json "version" (a unit test checks it). */
-export const PACKAGE_VERSION = '0.1.0';
+export const PACKAGE_VERSION = '0.1.1';
 
 export const CLIENT_HEADER = `n8n-nodes-aistupidlevel/${PACKAGE_VERSION}`;
 

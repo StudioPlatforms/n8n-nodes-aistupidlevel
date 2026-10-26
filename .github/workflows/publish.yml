@@ -1,0 +1,41 @@
+# Publishes n8n-nodes-aistupidlevel to npm with a provenance statement, which n8n requires for
+# community nodes published since 2026-05-01.
+#
+# Release: bump the version in package.json, package-lock.json and CHANGELOG.md, commit, then push
+# a tag v<version> (for example v0.1.1).
+#
+# npm auth, one of:
+#   - Trusted Publishing: on npmjs.com, package settings -> Trusted Publisher -> GitHub Actions,
+#     repository StudioPlatforms/n8n-nodes-aistupidlevel, workflow publish.yml. No secret needed.
+#   - NPM_TOKEN repository secret: a granular token with publish rights to the package.
+
+name: publish
+
+on:
+  push:
+    tags: ['v*.*.*']
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    permissions:
+      id-token: write
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          registry-url: https://registry.npmjs.org
+          cache: npm
+      - name: Check the tag matches package.json
+        run: |
+          v=$(node -p "require('./package.json').version")
+          [ "${GITHUB_REF_NAME}" = "v$v" ] || { echo "tag ${GITHUB_REF_NAME} does not match version $v"; exit 1; }
+      - run: npm install -g npm@11.6.2 # trusted publishing needs npm 11.5.1+
+      - run: npm ci
+      - run: npm test
+      # Inside GitHub Actions, n8n-node release lints, builds and publishes with provenance.
+      - run: npm run release
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}

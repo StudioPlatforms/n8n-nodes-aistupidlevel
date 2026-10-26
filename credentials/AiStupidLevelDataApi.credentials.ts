@@ -17,7 +17,7 @@ export class AiStupidLevelDataApi implements ICredentialType {
 	};
 
 	documentationUrl =
-		'https://github.com/StudioPlatforms/aistupidlevel-sdk/tree/main/packages/n8n-nodes-aistupidlevel#credentials';
+		'https://github.com/StudioPlatforms/n8n-nodes-aistupidlevel#credentials';
 
 	properties: INodeProperties[] = [
 		{

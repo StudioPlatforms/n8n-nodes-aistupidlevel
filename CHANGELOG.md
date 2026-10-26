@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.1.1
+
+- The package now lives in its own repository, github.com/StudioPlatforms/n8n-nodes-aistupidlevel, as n8n's
+  verification requires. Help links point there. No functional changes.
+
 ## 0.1.0
 
 - AI Stupid Level node: Chat (Send Message), Router (Preview Route, Get Usage, Send Feedback, List Models) and

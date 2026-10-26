@@ -1,6 +1,6 @@
 {
   "name": "n8n-nodes-aistupidlevel",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "n8n nodes for AI Stupid Level: the Smart Router (each request goes to the model measuring best for it, with your own provider keys), a chat model for the AI Agent, and continuously re-run LLM benchmark, drift and incident data.",
   "license": "MIT",
   "homepage": "https://aistupidlevel.info/router/docs",
@@ -20,11 +20,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/StudioPlatforms/aistupidlevel-sdk.git",
-    "directory": "packages/n8n-nodes-aistupidlevel"
+    "url": "git+https://github.com/StudioPlatforms/n8n-nodes-aistupidlevel.git"
   },
   "bugs": {
-    "url": "https://github.com/StudioPlatforms/aistupidlevel-sdk/issues"
+    "url": "https://github.com/StudioPlatforms/n8n-nodes-aistupidlevel/issues"
   },
   "scripts": {
     "build": "n8n-node build",

@@ -54,7 +54,7 @@ export class LmChatAiStupidLevel implements INodeType {
 			resources: {
 				primaryDocumentation: [
 					{
-						url: 'https://github.com/StudioPlatforms/aistupidlevel-sdk/tree/main/packages/n8n-nodes-aistupidlevel#ai-stupid-level-chat-model',
+						url: 'https://github.com/StudioPlatforms/n8n-nodes-aistupidlevel#ai-stupid-level-chat-model',
 					},
 				],
 			},
