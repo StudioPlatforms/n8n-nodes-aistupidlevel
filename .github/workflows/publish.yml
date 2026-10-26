@@ -36,5 +36,3 @@ jobs:
       - run: npm test
       # Inside GitHub Actions, n8n-node release lints, builds and publishes with provenance.
       - run: npm run release
-        env:
-          NPM_CONFIG_LOGLEVEL: verbose
