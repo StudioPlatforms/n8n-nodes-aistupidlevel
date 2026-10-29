@@ -29,8 +29,11 @@ The package contains two nodes:
 
 ## Installation
 
-Follow the [installation guide](https://docs.n8n.io/integrations/community-nodes/installation/) in the n8n community
-nodes documentation.
+**n8n Cloud.** This is a verified node: search for **AI Stupid Level** on the canvas and add it to your workflow. If it
+does not appear, make sure **Verified Community Nodes** is turned on in the Admin Panel, then restart the instance.
+
+**Self-hosted n8n.** Follow the [installation guide](https://docs.n8n.io/integrations/community-nodes/installation/) in
+the n8n community nodes documentation.
 
 1. In n8n, open **Settings → Community Nodes**.
 2. Select **Install**.
